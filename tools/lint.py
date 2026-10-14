@@ -183,6 +183,7 @@ for path in sys.argv[1:]:
                 if run[i:i + 12] in zt: hits.add(run[i:i + 12]); break
         for x in sorted(hits): errs.append(f"和译本有 12 个汉字以上相同的片段：{x}（页面上不能出现译本的句子）")
 
+    for src in sorted({x for x in re.findall(r'<img[^>]+src="([^"]+)"', t) if t.count(f'src="{x}"') > 1}): errs.append(f"同一张图出现了不止一次：{src}")
     errs += check_images(t, path, min_photos=4, min_svgs=2)
     c = counts(t)
     if not 6 <= c["检查题"] <= 8: errs.append(f"理解检查应有 6–8 题，现在 {c['检查题']} 题")
