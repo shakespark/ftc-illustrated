@@ -17,7 +17,7 @@
 | `assets/fc.js`、`assets/style.css` | 共享脚本和样式。骨架来自 Creating Modern Capitalism 伴读，下注和反方卡片来自枪炮伴读，读法切换是本站加的 |
 | `AUTHORING.md` | 章节页编写规范（公共部分见 `~/tutorials-deploy/AUTHORING-COMMON.md`） |
 | `tools/` | `extract.py`、`extract_zh.py` 提取文本；`lint.py` 本站的结构检查（含「和译本有 12 个汉字以上相同」的检查）；`overlap.py`、`check.mjs`、`fetch_img.py` 转调 `~/tutorials-deploy/scripts/` 里的共用版 |
-| `source/` | 原书和译本的 epub、提取的文本、截图、任务说明、Python 虚拟环境，以及 `zh-cuts-china.md`（译本里涉及中国的删改和错译，原文译文对照，本地参考）。**不入库、不部署** |
+| `source/` | 原书和译本的 epub、提取的文本、截图、任务说明、Python 虚拟环境，以及两份本地参考的原文译文对照：`zh-cuts-china.md`（译本里涉及中国的删改和错译）、`zh-mistranslations.md`（其余各章的错译、漏译、数字错）。**不入库、不部署** |
 
 localStorage 键都带 `fc-` 前缀：`fc-done-N`（N 是 0–10）、`fc-sec-N-节号`、`fc-star-NN-词条`、`fc-note-…`、`fc-bet-…`、`fc-mode-N`、`fc-theme`。
 
