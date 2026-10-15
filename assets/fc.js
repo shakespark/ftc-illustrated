@@ -91,7 +91,9 @@
     const set = (zh) => { document.body.classList.toggle("mode-zh", zh); b1.setAttribute("aria-pressed", String(!zh)); b2.setAttribute("aria-pressed", String(zh)); };
     const b1 = h("button", { class: "btn", onclick() { LS.set(key, null); set(false); } }, "英文原版");
     const b2 = h("button", { class: "btn", onclick() { LS.set(key, "zh"); set(true); } }, "张琦译本");
-    head.after(h("div", { class: "mode" }, h("span", {}, "这一章我读："), b1, b2));
+    const c = (window.FC_CHAPTERS || []).find((x) => x.n === n);
+    head.after(h("div", { class: "mode" }, h("span", {}, "这一章我读："), b1, b2,
+      c && c.zr ? h("p", { class: "zrel" }, h("b", {}, `译本：${c.zr[0]}。`), c.zr[1]) : null));
     set(LS.get(key) === "zh");
   }
 

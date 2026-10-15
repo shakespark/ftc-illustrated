@@ -298,6 +298,8 @@ table.findit p.q { margin: 0 0 6px; font-size: 14.5px; }
 .chapter-head dl.where dd { margin: 0; }
 /* 读法切换 */
 .mode { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+.mode .zrel { flex-basis: 100%; margin: 2px 0 0; line-height: 1.6; }
+.mode .zrel b { color: var(--fg); font-weight: 600; }
 body.mode-zh:not(.show-words) section.words { display: none; }
 .words-folded { display: none; }
 body.mode-zh:not(.show-words) .words-folded { display: block; background: var(--surface-2); border-radius: var(--radius); padding: 10px 16px; margin: 24px 0; }

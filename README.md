@@ -12,7 +12,7 @@
 | `chapters/NN.html` | `00` 开读之前（序言和引言），`01`–`10` 是原书各章。样板是 `01.html` |
 | `glossary.html` | 全书术语（英文、译本译法、解释），章节页链过来，主编维护 |
 | `recap.html` | 全书回顾：`fc.js` 读各个已完成章节页的「精彩回顾」汇总 |
-| `assets/chapters.js` | 目录数据（原书章名、译本章名、主题、一句话）和已完成的章 |
+| `assets/chapters.js` | 目录数据（原书章名、译本章名、主题、一句话、译本可靠度 `zr`）和已完成的章。`zr` 显示在每章读法切换下面，依据是 `source/` 里两份逐条对照 |
 | `assets/sections.js` | 各节的原书小标题、词数、Harvest 版页码、录音分钟数、译本小节名。由 `tools/extract.py` 和 `tools/extract_zh.py` 生成，不要手改 |
 | `assets/fc.js`、`assets/style.css` | 共享脚本和样式。骨架来自 Creating Modern Capitalism 伴读，下注和反方卡片来自枪炮伴读，读法切换是本站加的 |
 | `AUTHORING.md` | 章节页编写规范（公共部分见 `~/tutorials-deploy/AUTHORING-COMMON.md`） |
